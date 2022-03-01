@@ -29,7 +29,9 @@
             Console.WriteLine(user.location);
 
             var user2 = new User("Mauro");
-        }
+            Console.WriteLine(user2.name);
+            Console.WriteLine(user2.location);
+    }
 
         void ExemploConstrutorEncadeado()
         {
@@ -44,7 +46,7 @@
 
 
             var user3 = new User(user2);
-            Console.WriteLine("Fiz uma cópia do user2. Vamos ver comon ficou:");
+            Console.WriteLine("Fiz uma cópia do user2. Vamos ver como ficou:");
             Console.WriteLine(user3.name);
             Console.WriteLine(user3.location);
         }
@@ -79,13 +81,15 @@
     public class User
     {
         public string name, location;
-        // Default Constructor
+
+        // construtor padrão
         public User()
         {
             name = "Suresh Dasari";
             location = "Hyderabad";
         }
 
+        // construtor parametrizado
         public User(string name)
         {
             this.name = name;
@@ -94,6 +98,7 @@
             Console.WriteLine("Construtor com parâmetro");
         }
 
+        // construtor copy
         public User(User user)
         {
             name = user.name;
@@ -105,15 +110,17 @@
     {
         public UserEncadeado()
         {
-            Console.Write("Olá, ");
+            Console.WriteLine("1 - Olá, ");
         }
+
         public UserEncadeado(string a) : this()
         {
-            Console.Write(a);
+            Console.WriteLine("2 - " + a);
         }
+
         public UserEncadeado(string a, string b) : this("bem vindo")
         {
-            Console.Write(a + " " + b);
+            Console.WriteLine("3 - " + a + " " + b);
         }
     }
 
@@ -124,6 +131,7 @@
         {
             Console.WriteLine("I am Static Constructor");
         }
+
         // Default Constructor
         public UserStaticCtor()
         {
@@ -160,7 +168,6 @@
             {
                 Console.WriteLine("A instância Já foi criada.");
             }
-
 
             return _instance;
         }

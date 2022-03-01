@@ -27,7 +27,7 @@ public class Animal
 {
     private int Altura;
     protected int Peso;
-    internal int Idade;
+    internal int Idade; // apenas o próprio 
 
     public void MostraPeso()
     {
