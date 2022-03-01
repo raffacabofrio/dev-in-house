@@ -1,4 +1,29 @@
-﻿public class Animal
+﻿public class Modificadores
+{
+    public void Exemplos()
+    {
+        Exemplo01();
+    }
+
+    public void Exemplo01()
+    {
+        var mimosa = new Vaca();
+        var estranho = new Ornitorrinco();
+
+        Console.WriteLine("Peso da vaca:");
+        mimosa.MostraPeso();
+
+        Console.WriteLine("Peso do Ornitorrinco:");
+        estranho.MostraPeso();
+
+
+        // Aqui funciona porque está no mesmo Assembly
+        // Repare que no outro "ExemploAssemblySeparado" NÃO FUNCIONA!
+        Console.WriteLine("Idade da vaca:" + mimosa.Idade);
+    }
+}
+
+public class Animal
 {
     private int Altura;
     protected int Peso;
