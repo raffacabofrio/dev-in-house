@@ -6,10 +6,13 @@ public class Encapsulamento
     public void Exemplos()
     {
         var r = new Retangulo();
+
         WriteLine("Informe o comprimento: ");
         r.Comprimento = Convert.ToDouble(Console.ReadLine());
+
         WriteLine("Informe a largura : ");
         r.Largura = Convert.ToDouble(Console.ReadLine());
+
         WriteLine($"Area do Retangulo: {r.GetArea()}");
     }
 
@@ -27,13 +30,9 @@ class Retangulo
         set
         {
             if (value < 0)
-            {
                 throw new ArgumentException("O valor do comprimento não pode ser menor que zero");
-            }
-            else
-            {
-                comprimento = value;
-            }
+                
+            comprimento = value;
         }
     }
 

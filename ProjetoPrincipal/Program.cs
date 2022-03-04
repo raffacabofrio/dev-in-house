@@ -10,8 +10,13 @@
 //var encapsulamento = new Encapsulamento();
 //encapsulamento.Exemplos();
 
-var overload = new Overload();
-overload.Exemplos();
+//var overload = new Overload();
+//overload.Exemplos();
+
+var telefoneSemFio = new TelefoneSemFio();
+telefoneSemFio.Exemplos();
+
+
 
 
 
